@@ -1,9 +1,14 @@
 
-img {
+#kitten1 {
 	position: absolute;
-	left: 10px;
 	left: -55px;	
 	top: 250px;
+}
+
+#kitten2 {
+	position: absolute;
+	left:850px;
+	top: 800px;
 }
 
 .link{
