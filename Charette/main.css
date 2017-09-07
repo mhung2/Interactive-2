@@ -1,0 +1,190 @@
+/*
+img {
+	position: absolute;
+	left: 10px;
+	left: -55px;	
+	top: 200px;
+}*/
+
+#kitten{
+	position: relative;
+	left:25px;
+	top: 367px;
+	font-size:9px;
+	color: #81eff9;
+
+}
+
+
+.text {
+	position: relative;
+	top:  5px;
+	left: 50px;
+	font-family: 'Futura', sans-serif;
+	color: #304b56;
+	font-size: 15px;
+	letter-spacing: 2px;
+	line-height: 65px;
+}
+
+.container {
+	position:relative;
+	top:10px;
+	width: 400px;
+/*	border: 1px solid blue;*/
+	margin: auto;
+	font-family: 'Futura', sans-serif;
+	color: #304b56;
+	font-size: 15px;
+	letter-spacing: 2px;
+
+/*	background-color:pink;*/
+}
+
+.overall {
+	float:left;
+	width: 100px;
+	height: 100px;
+	background: #e3f9f9;
+	/*border: 3px solid pink;*/
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	position: relative;
+	top: -100px;
+	margin: 10px;
+	z-index:2;
+}
+
+#button2{
+	transition: background 2s ease;
+	position: relative;
+}
+
+#button2:hover {
+	background: #f7d9f4;	
+}
+
+#button5{
+	transition: all 2s ease;
+}
+
+#button5:hover {
+	border-radius: 0;
+	background: #dcf9d9;
+}
+
+#button3{
+	transition: border 2s ease;
+/*	transition: background;	*/
+}
+
+#button3:hover{
+	border: dotted 3px #67edfc;
+/*	background: white;*/
+}
+
+#button1{
+	transition: background 1s ease;
+}
+
+#button1:hover{
+	background: white;
+	
+}
+
+#button4{
+	transition: all 1s ease;
+}
+
+#button4:hover{
+	transform: skew(20deg);
+	background: #f6dcf7;
+}
+
+#button10{
+	transition: all ease 2s;
+}
+
+#button10:hover{
+	background:rgba(252, 221, 217, 0.4);
+}
+
+#button6{
+	transition: all 2s ease;	
+}
+	
+#button6:hover{
+	border-radius:0;
+	transform: matrix(1, -0.3, 0, 1, 0, 0);
+	background-color:#f6f9d4;
+}
+
+#button9{
+	transition: all 2s ease ;
+}
+
+#button9:hover{
+	transform: translate(400px,0);
+	background: #ade7ed;
+}
+
+#button11{
+	z-index: 1;
+	transition: all 2s ease;
+}
+
+#button11:hover {
+	transform: scale(20);
+/*	background-color: #b8bfed;*/
+	background-color: #ade7ed;
+}
+
+#button8 {
+	transition: all 2s ease;
+}
+
+#button8:hover{
+	background-color:#f9d9e3;
+	border-radius: 0;
+	transform: translate(350px, -350px) rotate(360deg);
+	
+}
+
+#button7{
+	transition: all 2s ease;
+}
+
+#button7:hover {
+	background-color:#e7f9d9;
+	border-radius: 0;
+	transform: rotate(360deg);
+}
+
+#button12{
+	transition: all 3s ease;
+	
+}
+		
+
+#button12:hover{
+	animation-duration: 3s;
+  animation-name: bounceIn;
+	animation: bounceIn 3s;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
