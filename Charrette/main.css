@@ -1,12 +1,6 @@
-/*
-img {
-	position: absolute;
-	left: 10px;
-	left: -55px;	
-	top: 200px;
-}*/
 
-#kitten{
+
+#kitten {
 	position: relative;
 	left:25px;
 	top: 367px;
@@ -18,7 +12,7 @@ img {
 
 .text {
 	position: relative;
-	top:  5px;
+	top:  35px;
 	left: 50px;
 	font-family: 'Futura', sans-serif;
 	color: #304b56;
@@ -37,7 +31,6 @@ img {
 	color: #304b56;
 	font-size: 15px;
 	letter-spacing: 2px;
-
 /*	background-color:pink;*/
 }
 
@@ -161,8 +154,7 @@ img {
 }
 
 #button12{
-	transition: all 3s ease;
-	
+	transition: all 3s ease;	
 }
 		
 
