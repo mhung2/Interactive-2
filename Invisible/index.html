@@ -1,0 +1,369 @@
+<!Doctype html>
+	<head>
+
+		<title> Invisible Poem </title>
+
+		<meta charset="utf-8"/>
+		<!-- <link rel="stylesheet" href="main.css"/> -->
+
+		 <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+  		<!-- uncomment lines below to include extra p5 libraries -->
+  		<script language="javascript" src="libraries/p5.dom.js"></script>
+  		<script language="javascript" src="libraries/p5.sound.js"></script>
+
+		<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    	<script src="setup.js"></script>
+   		<script src="script.js"> </script>
+<script>
+   jQuery(document).ready(function($) {
+
+	// set the variables
+	var timer;
+    var mouseX = 0, mouseY = 0;
+    var xp = 0, yp =0;
+    var circle = $("#circle");
+
+    function mouseStopped(){    
+        // if mouse stop moving remove class moving 
+        // it will hide the circle with opacity transition                           
+        circle.removeClass('moving');
+    }
+   
+    $(document).mousemove(function(e){
+    	// if mouse start moving add class moving
+        // it will show the circle with opacity transition 
+    	circle.addClass('moving');
+    	// get the mouse position minus 160px to center the circle
+        mouseX = e.pageX - 160;
+        mouseY = e.pageY - 160; 
+        // if mouse stop moving clear timer and call mouseStopped function
+        clearTimeout(timer);
+        timer=setTimeout(mouseStopped,3000);   
+    });
+    
+    // set the momentum with setInterval function
+    var loop = setInterval(function(){
+       // change 12 to alter damping higher is slower
+       xp += ((mouseX - xp)/6);
+       yp += ((mouseY - yp)/6);
+       circle.css({left: xp +'px', top: yp +'px'});  // 
+    }, 30);
+
+
+
+});
+
+   		</script>
+
+
+  <style>
+
+ @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+  @import url('https://fonts.googleapis.com/css?family=Quattrocento');
+  @import url('https://fonts.googleapis.com/css?family=Philosopher');
+
+  body{
+	background:white;
+	/*font-family: 'Quattrocento', serif;*/
+	/*font-family: Georgia;*/
+	/*font-family: Arial;*/
+/*	font-family: Helvetica;*/
+	font-family: 'Philosopher', sans-serif;
+	/*font-family: 'Playfair+Display', serif;*/
+	height:1000px;
+}
+ 
+
+
+@keyframes linee{
+	0%{width:0px;}
+/*	20%{width:50px;}*/
+	100%{width:220px;}
+}
+ 
+
+
+#line1 {
+	z-index:10;
+	top:100px;
+	left:100px;
+	position:fixed;
+	font-size:1em; 
+	color:white;
+	/*color:transparent;
+	text-shadow: 0 0 5px rgba(255,255,255,0.95);*/
+	transition:1s ease all;
+	letter-spacing:0.5px;
+	cursor:none;
+} 
+
+#line{
+	z-index:10;
+	background-color:white;
+	position:fixed;
+	width:0px;
+	height:1.5px;
+	/*top:300px;
+	left:395px;*/
+	transition:1.2s ease all;
+	top:108px;
+	left:100px;
+	cursor:none;
+}
+
+
+.wrapper3{
+	position:relative;
+	overflow:auto;
+}
+
+.wrapper3:hover #line{
+	animation-name:linee;
+	animation-duration:2s;
+/*	animation-delay:0.1s;*/
+	animation-fill-mode:forwards;
+	cursor:none;
+}
+ 
+
+@keyframes rotatee{
+	50% {transform: rotate(0deg) scale(1.095);}
+	100% { transform:rotate(360deg) scale(0.01); }
+}
+
+#line2,#draining{
+	z-index:10;
+	top:250px;
+	left:250px;
+	position:fixed;
+	font-size:1em; 
+	color:white;
+	/*color:transparent;
+	text-shadow: 0 0 5px rgba(255,255,255,0.8);*/
+	transition:2s ease all;
+	letter-spacing:0.5px;
+	cursor:none;
+} 
+
+#draining {
+	overflow:hidden;
+	position:absolute;
+	color:white;
+	top:241.5px;
+	left:298px;
+	/*left:380px;*/
+}
+
+.wrapper2{
+	position:relative;
+	transition: 2s ease all;
+}
+
+
+.wrapper2:hover #draining{
+	cursor:none;
+	text-shadow:none;
+	filter:none;
+	color:white;
+	animation-name: rotatee;
+	animation-delay: 0.15s;
+	animation-duration:2.1s;
+	animation-fill-mode:forwards;
+}
+
+
+@keyframes rove{
+	20% {transform: translate3d(0,0,0); color:white;}
+	/*75% {transform: translate3d(-30px,0,0);}*/
+	100% {transform: translate3d(-30px,0,0); color:yellow;}
+}
+
+@keyframes rovetwo{
+	100%{transform: translate3d(-200px, 0,0);}
+}
+
+
+#line3, 
+#someone{
+	z-index:10;
+	top:400px;
+	left:400px;
+	position:absolute;
+	font-size:1em; 
+	color:white;
+	letter-spacing:0.5px;
+	transition: 1s ease all;
+	cursor:none;
+} 
+
+
+#someone {
+	color:transparent;
+	overflow:hidden;
+	position:absolute;
+	left:480px;
+}
+
+.wrapper{
+	position:relative;
+	transition: 1s ease all;
+
+}
+
+.wrapper:hover #someone{
+	cursor:none;
+	width:100%;
+	animation-name: rove;
+	animation-duration: 2.5s;
+	animation-fill-mode: forwards;
+}
+
+
+#line4{
+	z-index:10;
+	top:500px;
+	left:500px;
+	position:fixed;
+	font-size:1em; 
+	color:transparent;
+	text-shadow: 0 0 5px rgba(255,255,255,0.8);
+	transition:3s ease all;
+	letter-spacing:0.5px;
+
+} 
+
+#line4:hover{
+	text-shadow:none;
+	color:white;
+	transform:scale(1.1);
+}
+
+
+#line5{
+	position:relative;
+	/*top:600px;
+	left:650px;*/
+	cursor:none;
+	color:white;
+/*	color:transparent;
+	text-shadow: 0 0 5px rgba(255,255,255,0.8);*/
+	transition:2s ease all;
+/*	font-size:200px;*/
+	top:580px;
+	left:690px;
+	z-index:50;
+}
+
+
+#line5: hover{
+	transform:translate(-200px, 0,0);
+}
+
+.wrapper4 {
+	width:100%;
+	height:100%;
+	position:relative;
+	overflow:auto;
+}
+
+.wrapper4:hover #line5{
+	animation-name:rovetwo;
+	animation-duration: 2s;
+	animation-delay:2s;
+	animation-fill-mode:forwards;
+	z-index:100;
+}
+
+
+
+.circle-follow {
+	position :absolute;
+	overflow : hidden;
+	background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+/*background-image: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);*/
+	width :300px; 
+	height: 300px;
+	filter:blur(20px);
+    top:calc( 50% - 150px); 
+    left:calc( 50% - 150px); 
+    -webkit-border-radius: 150px; 
+    border-radius: 150px;  
+    -webkit-transition: opacity 0.3s cubic-bezier(0.52, 0.01, 0.16, 1);  
+    transition: opacity 0.3s cubic-bezier(0.52, 0.01, 0.16, 1);  
+    /*opacity : 0; */
+}
+.circle-follow::before  {
+	content : ' ';  
+	height : 100%; 
+	width : 100%; 
+	position: absolute; 
+	top : 0px; 
+	left : 0px; 
+}
+
+.circle-follow.moving {
+	opacity: 1;
+}
+
+.overall{
+position:absolute;
+filter:blur(15px);
+background:blue;
+width:150px;
+height:150px;
+border-radius:50%;
+z-index:1;
+}
+
+
+
+
+#scale{
+	transform: scale(2);
+}
+
+
+</style>
+
+
+<body>
+
+
+
+			<span id="circle" class="circle-follow">
+			</span>
+		
+
+	<div class="wrapper3"> 	
+	<div id="line1"> I do not need the kind of love </div>
+	<div id="line">  </div>
+	</div>
+
+	<div class=wrapper2>
+		<div id="line2"> that is &nbsp; &nbsp; &nbsp; &nbsp;</div>
+		<div id="draining"> draining </div>
+	</div>
+
+	<div class=wrapper>
+		<div id="line3"> I want &nbsp; &nbsp; &nbsp; &nbsp;</div>
+		<div id="someone"> someone </div>
+	</div>
+
+	<div class="wrapper4">
+		<div id="line4"> who energizes me </div>
+		<div id="line5"> –Rupi Kaur </div>
+	</div>
+
+</body>
+
+
+
+
+
+
+
+
+
+</html>
+
+
