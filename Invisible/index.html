@@ -84,38 +84,41 @@
 
 
 #line1 {
+	color:transparent;
+	text-shadow: 0 0 5px rgba(255,255,255,0.8);
 	z-index:10;
 	top:100px;
 	left:100px;
 	position:fixed;
 	font-size:1em; 
 	color:white;
-	/*color:transparent;
-	text-shadow: 0 0 5px rgba(255,255,255,0.95);*/
+	color:transparent;
+	text-shadow: 0 0 5px rgba(255,255,255,0.95);
 	transition:1s ease all;
 	letter-spacing:0.5px;
 	cursor:none;
 } 
+	  
+	    
+	#line1:hover{
+	color:white;
+	text-shadow:none;
+	  }
 
 #line{
 	z-index:10;
-	color:transparent;
-	text-shadow: 0 0 5px rgba(255,255,255,0.8);
+	color:white
 	position:fixed;
 	width:0px;
 	height:1.5px;
 	/*top:300px;
 	left:395px;*/
-	transition:1.2s ease all;
+	transition:1s ease all;
 	top:108px;
 	left:100px;
 	cursor:none;
 }
-	  
-	  #line1:hover{
-	color:white;
-	text-shadow:none;
-	  }
+	
 
 
 .wrapper3{
@@ -223,7 +226,6 @@
 .wrapper{
 	position:relative;
 	transition: 1s ease all;
-
 }
 
 .wrapper:hover #someone{
@@ -243,7 +245,7 @@
 	font-size:1em; 
 	color:transparent;
 	text-shadow: 0 0 5px rgba(255,255,255,0.8);
-	transition:3s ease all;
+	transition:2s ease all;
 	letter-spacing:0.5px;
 
 } 
@@ -280,6 +282,7 @@
 	height:100%;
 	position:relative;
 	overflow:auto;
+	transition:2s ease all;
 }
 
 .wrapper4:hover #line5{
