@@ -1,0 +1,236 @@
+<!Doctype html>
+	<head>
+
+		<title> Yayoi Kusama </title>
+
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="main.css"/>
+
+		 <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+  		<!-- uncomment lines below to include extra p5 libraries -->
+  		<script language="javascript" src="libraries/p5.dom.js"></script>
+  		<script language="javascript" src="libraries/p5.sound.js"></script>
+
+		<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    	<script src="setup.js"></script>
+   		<script src="script.js"></script>
+
+	</head>
+
+	<body>
+	<html lang="en">
+	<head>
+  		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+ 		 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  		<link rel="stylesheet" href="/resources/demos/style.css">
+
+  <style>
+ 
+  </style>
+
+<!--   <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+
+  let palette = ['#f00', '#ff0', '#00f', '#3fb71f'];
+  let img;
+
+  function preload() {
+	  	img = loadImage("whiteroom.jpg");
+  	
+  }
+
+	function setup() {
+	  	let myCanvas = createCanvas(600, 450);
+	  	myCanvas.parent('piano');
+  		noStroke();
+  		image(img, 0, 0, 600, 450);
+
+	}	
+	function draw(){
+  		// noLoop();
+	}
+
+function mousePressed(){
+  let colIdx = floor(random(palette.length));
+  let col = palette[colIdx];
+  fill(col);
+  let s = random(5,25);
+  ellipse(mouseX, mouseY, s,s);
+	}
+
+  $( function() {
+    $( "#draggable" ).draggable();
+  } );
+
+    $( function() {
+    $( "#draggablea" ).draggable();
+  } );
+
+     $( function() {
+    $( "#draggableb" ).draggable();
+  } );
+
+    $( function() {
+    $( "#draggable1", ).draggable();
+  } );
+
+      $( function() {
+    $( "#draggable1a", ).draggable();
+  } );
+
+    $( function() {
+    $( "#draggable1b", ).draggable();
+  } );
+
+     $( function() {
+    $( "#draggable2", ).draggable();
+  } );
+
+      $( function() {
+    $( "#draggable2a", ).draggable();
+  } );
+
+       $( function() {
+    $( "#draggable2b", ).draggable();
+  } );
+
+          $( function() {
+    $( "#draggable3", ).draggable();
+  } );
+
+             $( function() {
+    $( "#draggable3a", ).draggable();
+  } );
+
+                $( function() {
+    $( "#draggable3b", ).draggable();
+  } );
+
+
+
+  //       $( function() {
+  //   $( "#draggable4", ).draggable();
+  // } );
+ 
+ 
+
+  </script>
+</head>
+
+<!-- <div id="draggable" class="ui-widget-content"></div>
+<div id="draggablea" class="ui-widget-content"></div>
+<div id="draggableb" class="ui-widget-content"></div>
+<div id="draggable1" class="ui-widget-content"></div>
+<div id="draggable1a" class="ui-widget-content"></div>
+<div id="draggable1b" class="ui-widget-content"></div>
+<div id="draggable2" class="ui-widget-content"></div>
+<div id="draggable2a" class="ui-widget-content"></div>
+<div id="draggable2b" class="ui-widget-content"></div>
+<div id="draggable3" class="ui-widget-content"></div>
+<div id="draggable3a" class="ui-widget-content"></div>
+<div id="draggable3b" class="ui-widget-content"></div>
+ -->
+
+
+
+<div class="container">
+
+
+
+	<div class="overally" id="aa"> </div>
+	<div class="overally" id="bb"> </div>
+	<div class="overally" id="cc"> </div>
+	<div class="overally" id="dd"> </div>
+	<div class="overally" id="e"> </div>
+	<div class="overally" id="f"> </div>
+	<div class="overally" id="g"> </div>
+	<div class="overally" id="h"> </div>
+	<div class="overally" id="i"> </div>
+	<div class="overally" id="j"> </div>
+	<div class="overally" id="k"> </div>
+	<div class="overally" id="l"> </div>
+	<div class="overally" id="m"> </div>
+	<div class="overally" id="n"> </div>
+	<div class="overally" id="o"> </div>
+	<div class="overally" id="p"> </div>
+	<div class="overally" id="q"> </div>
+	<div class="overally" id="r"> </div>
+
+
+	</div>
+
+	<div id="red">
+	</div>
+
+	<div id="white">
+	</div>
+
+	<div id="dotsgalore">
+	<!-- <img src="DOTSXI.png"> -->
+	<img src="DOTSGALORE.png">
+	<!-- <img src="YKEE.png"> -->
+	</div>
+
+
+	<div id="yk">
+	<img src="YK.jpg">
+	</div>
+
+	<div class="introcontainer" id="intro">
+	<h2> ABOUT THE ARTIST: <br> YAYOI KUSAMA </h2> <br>
+	Born Japan, 1929, Yayoi Kusama is a Japanese writer and artist. She moved to the United States and settled in New York City. Embracing the rise of the hippie counterculture of the late 1960s, Kusama came to public attention when she organized a series of happenings in which naked participants were painted with brightly colored polka dots. Since then her work has been exhibited around the world and she has engaged in multiple collaborations with notable fashion designers.
+	</div>
+
+	<div class="rect"> </div>
+
+	<div class="rect"> </div>
+
+	<div id=quote> 
+	“My desire was to predict and measure the infinity of the unbounded universe, from <br> my own position in it, with dots.”
+	</div>
+
+	<div id=obbie> 
+	<img src="obroom.jpg">
+	</div>
+
+
+
+	<!-- <div id=Ob1>
+	Decorate your own "Obliteration Room" ! <br>  Simply drag the colored dots below:
+	</div> -->
+
+	<div id="diy">
+	MISSION: OBLITERATE
+	</div>
+
+	<div id="diysub">
+	Decorate the room with dots to achieve Yayoi Kusama's Obliteration Room!
+	</div>
+
+		<div id="piano">
+			<!-- <img src="piano.jpg" width:1100px, height:800px;> -->
+		</div>
+
+	<!-- <div id="LVE">
+	<img src="LV.jpg">
+	</div>
+
+	<div id="G">
+	<img src="george.jpg">
+	</div> -->
+
+
+	</body>
+
+	</html>
+
+ 
+ 
+</body>
+</html>
+
+	
+
+	
