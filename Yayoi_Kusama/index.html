@@ -41,10 +41,10 @@
   }
 
 	function setup() {
-	  	let myCanvas = createCanvas(1000, 800);
+	  	let myCanvas = createCanvas(1100, 850);
 	  	myCanvas.parent('piano');
   		noStroke();
-  		image(img, 0, 0, 1000, 800);
+  		image(img, 0, 0, 1100, 850);
 
 	}	
 	function draw(){
@@ -55,7 +55,7 @@ function mousePressed(){
   let colIdx = floor(random(palette.length));
   let col = palette[colIdx];
   fill(col);
-  let s = random(5,25);
+  let s = random(8,35);
   ellipse(mouseX, mouseY, s,s);
 	}
 
